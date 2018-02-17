@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 1,
+    "failures": 1,
+    "start": "2017-12-31T17:37:01.653Z",
+    "end": "2017-12-31T17:37:31.649Z",
+    "duration": 29996,
+    "testsRegistered": 3,
+    "passPercent": 50,
+    "pendingPercent": 33.3,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "4f43c616-2f01-46fc-8dce-3a87bfb85bde",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "24039a8e-bd72-419f-aeef-4765452ab8da",
+        "title": "application launch",
+        "fullFile": "D:\\JavaScript\\SpectronJS\\Sample.js",
+        "file": "\\Sample.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "application launch \"before each\" hook",
+            "timedOut": false,
+            "duration": 12213,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "this.app = new Application({\n  path: 'C:/Users/ai/AppData/Local/slack/slack.exe'\n})\nreturn this.app.start()",
+            "err": {},
+            "isRoot": false,
+            "uuid": "e197e11c-3cf3-4722-b91c-d65b23880439",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "application launch \"after each\" hook",
+            "timedOut": false,
+            "duration": 2408,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "if (this.app && this.app.isRunning()) {\n  return this.app.stop()\n}",
+            "err": {},
+            "isRoot": false,
+            "uuid": "83288f97-6c8d-4b8b-8515-f4e90870d0e7",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "shows an initial window",
+            "fullTitle": "application launch shows an initial window",
+            "timedOut": false,
+            "duration": 34,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "return this.app.client.getWindowCount().then(function (count) {\n  assert.equal(count, 3)\n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "e753e89a-41ad-4560-90e9-abcd690f324c",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "opens a window",
+            "fullTitle": "application launch opens a window",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": true,
+            "code": "",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8e9eff4b-47ca-4784-8c21-87cbc8459ad2",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "sendValue",
+            "fullTitle": "application launch sendValue",
+            "timedOut": false,
+            "duration": 173,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "return this.app.client.setValue('//*[@id=\"domain\"]','musthafa@qa.com');",
+            "err": {
+              "message": "Error: An element could not be located on the page using the given search parameters (\"//*[@id=\"domain\"]\").",
+              "estack": "Error: An element could not be located on the page using the given search parameters (\"//*[@id=\"domain\"]\").\n    at new CommandError (node_modules\\webdriverio\\build\\lib\\utils\\ErrorHandler.js:138:12)\n    at Object.<anonymous> (node_modules\\webdriverio\\build\\lib\\commands\\setValue.js:34:19)\n    at Object.exec (node_modules\\webdriverio\\build\\lib\\helpers\\safeExecute.js:28:24)\n    at Object.resolve (node_modules\\webdriverio\\build\\lib\\webdriverio.js:191:29)\n    at node_modules\\webdriverio\\build\\lib\\webdriverio.js:540:32\n    at _fulfilled (node_modules\\q\\q.js:854:54)\n    at self.promiseDispatch.done (node_modules\\q\\q.js:883:30)\n    at Promise.promise.promiseDispatch (node_modules\\q\\q.js:816:13)\n    at node_modules\\q\\q.js:624:44\n    at runSingle (node_modules\\q\\q.js:137:13)\n    at flush (node_modules\\q\\q.js:125:13)\n    at _combinedTickCallback (internal/process/next_tick.js:73:7)\n    at process._tickDomainCallback (internal/process/next_tick.js:128:9)\nFrom: Task: application launch sendValue\n    at Context.ret (node_modules\\selenium-webdriver\\testing\\index.js:182:10)\n    at process._tickDomainCallback (internal/process/next_tick.js:135:7)"
+            },
+            "isRoot": false,
+            "uuid": "d934a339-4398-413a-9b32-dd1c55525a0b",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "e753e89a-41ad-4560-90e9-abcd690f324c"
+        ],
+        "failures": [
+          "d934a339-4398-413a-9b32-dd1c55525a0b"
+        ],
+        "pending": [
+          "8e9eff4b-47ca-4784-8c21-87cbc8459ad2"
+        ],
+        "skipped": [],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 150000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2017
+}
